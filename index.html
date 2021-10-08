@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-eqiov="X-UA-Compatible" content="IT=edge" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="src/styles.css"
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+      <div class="container">
+          <form class="search-form" id="search-form">
+            <input
+              type="text"
+              class="form-control"
+              id="locationInput"
+              placeholder="Enter a city..."
+              autocomplete="off"
+              autofocus="on"
+            />
+            <input
+              type="submit"
+              class="form-control btn btn-primary mb-3"
+              value="🔎"
+            />
+            <button id="currentLocation">Current Location</button>
+          </form>
+          <div class="row">
+            <div id="col city">
+              <div id="city">Davenport</div>
+              <br />
+              <span id="date">Wednesday, 00:14</span>
+            </div>
+    
+            <div class="col float-left">
+                <img
+                src="https://th.bing.com/th/id/R.e5359c1539d8273cb0b1b36e8d55e91d?rik=iVxXdPNOqkapZQ&pid=ImgRaw&r=0"
+                alt="weather-icon"
+                class="weather-icon"
+              />
+              <br />
+              <span class="temperature" id="temperature">75</span>
+    
+              <span class="units"> <a href="#" id="fahrenheit-link">ºF | <a href="#" id="celsius-link">ºC </a></span>
+            </div>
+    
+            <div class="col alerts">
+              <ul>
+                <li class="precipitation">Precipitation: 0%</li>
+                <li class="humidity">Humidity: 44%</li>
+                <li class="windspeed">Wind: 5 mph</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+    <script src="src/index.js"></script>
+  </body>
+</html>

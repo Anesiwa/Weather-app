@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+}
+.row {
+  display: flex;
+}
+li {
+  list-style: none;
+}
+weather-icon {
+  size: 10px;
+}
+degrees {
+  font-size: 20px;
+}
+#city {
+  font-size: 35px;
+  color:  ;
+}
+#date {
+  font-size: 15px;
+}
+#temperature {
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+}
+.weather-icon {
+  display: block;
+  margin: 0 auto;
+  max-width: 50px;
+}

@@ -1,4 +1,4 @@
-weather-app {
+.weather-app {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: sans-serif;
 }
@@ -6,17 +6,18 @@ li {
   list-style: none;
 }
 weather-icon {
-  size: 10px;
+  display: inline;
 }
 degrees {
   font-size: 20px;
+  color: #3a3a3c;
 }
 .row {
-  display: flex;
+  display: inline-flex;
 }
 #city {
   font-size: 35px;
-  color: ;
+  color: blue;
 }
 #date {
   font-size: 15px;

@@ -1,6 +1,9 @@
 body {
   font-family: sans-serif;
 }
+container {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
 .row {
   display: flex;
 }
@@ -15,7 +18,7 @@ degrees {
 }
 #city {
   font-size: 35px;
-  color:  ;
+  color: ;
 }
 #date {
   font-size: 15px;

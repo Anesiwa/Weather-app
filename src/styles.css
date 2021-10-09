@@ -1,11 +1,6 @@
-body {
-  font-family: sans-serif;
-}
-container {
+weather-app {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-}
-.row {
-  display: flex;
+  font-family: sans-serif;
 }
 li {
   list-style: none;
@@ -15,6 +10,9 @@ weather-icon {
 }
 degrees {
   font-size: 20px;
+}
+.row {
+  display: flex;
 }
 #city {
   font-size: 35px;

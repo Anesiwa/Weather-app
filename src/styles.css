@@ -4,6 +4,9 @@ li {
 a {
   font-size: smaller;
 }
+ul {
+  right: 0px;
+}
 .temperatureDetails {
   padding: 15px;
 }
@@ -47,5 +50,6 @@ a {
 }
 #contact {
   color: #141518;
-  font-weight: bold;
+  font-size: smaller;
+  position: ;
 }

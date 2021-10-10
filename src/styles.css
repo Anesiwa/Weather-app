@@ -10,6 +10,8 @@ ul {
 }
 .row {
   padding: 15px;
+  display: flex;
+  margin: 15px 0;
 }
 .units {
   font-size: 20px;
@@ -79,9 +81,5 @@ ul {
   float: right;
 }
 .col-6 {
-  padding: 15px 0;
-  max-width: 50px;
-  flex: 0 0 50%;
-  position: relative;
-  width: 100%;
+  max-width: 50%;
 }

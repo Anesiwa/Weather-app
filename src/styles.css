@@ -10,7 +10,6 @@ ul {
 }
 .row {
   padding: 15px;
-  display: flex;
 }
 .units {
   font-size: 20px;
@@ -54,9 +53,20 @@ ul {
 }
 #searchButton {
   color: darkblue;
+  border-color: #3a3a3c;
+  text-align: center;
+  vertical-align: middle;
+}
+#searchButton.hover {
 }
 #currentLocation {
   color: darkred;
+  border-color: #3a3a3c;
+  text-align: center;
+  vertical-align: middle;
+}
+#currentLocation.hover {
+  cursor: pointer;
 }
 .units {
   position: relative;
@@ -67,8 +77,10 @@ ul {
   font-size: 14px;
   float: right;
 }
-div.col-6 {
-  padding: 15px;
+.col-6 {
+  padding: 15px 0;
   max-width: 50px;
   flex: 0 0 50%;
+  position: relative;
+  width: 100%;
 }

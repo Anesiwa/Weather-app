@@ -1,16 +1,14 @@
 li {
   list-style: none;
 }
-weather-icon {
-  display: inline;
+.temperatureDetails {
+  padding: 15px;
 }
-degrees {
+.units {
   font-size: 20px;
   color: #3a3a3c;
 }
-div {
-  display: block;
-}
+
 .weather-app {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: sans-serif;
@@ -32,18 +30,14 @@ div {
   color: blue;
 }
 #date {
-  font-size: 15px;
+  font-size: 35px;
 }
 #temperature {
   font-size: 20px;
   text-align: center;
-  display: block;
-}
-.weather-icon {
-  display: block;
-  margin: 0 auto;
-  max-width: 100px;
+  display: inline;
 }
 #contact {
-  border: #3a3a3c;
+  color: #3a3a3c;
+  font-weight: bold;
 }

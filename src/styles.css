@@ -65,9 +65,7 @@ ul {
 #contact {
   color: #141518;
   font-size: 14px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  float: right;
 }
 div.col-6 {
   padding: 15px;

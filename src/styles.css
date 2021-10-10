@@ -8,6 +8,9 @@ li {
 ul {
   right: 0px;
 }
+p {
+  padding-left: 5px;
+}
 .row {
   padding: 15px;
   display: flex;
@@ -73,6 +76,7 @@ ul {
 }
 .units {
   position: relative;
+  top: -34px;
   font-size: 18px;
 }
 #contact {
@@ -81,5 +85,8 @@ ul {
   float: right;
 }
 .col-6 {
+  position: relative;
   max-width: 50%;
+  flex: 0 0 50%;
+  width: 100%;
 }

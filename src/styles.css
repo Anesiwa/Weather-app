@@ -58,6 +58,7 @@ ul {
   vertical-align: middle;
 }
 #searchButton.hover {
+  cursor: pointer;
 }
 #currentLocation {
   color: darkred;

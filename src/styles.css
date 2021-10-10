@@ -1,16 +1,16 @@
+h1 {
+  margin: 10px 0 0 0;
+}
 li {
   list-style: none;
 }
-a {
-  font-size: smaller;
-}
+
 ul {
   right: 0px;
 }
 .row {
   padding: 15px;
   display: flex;
-  margin: 15px 0 15px 0;
 }
 .units {
   font-size: 20px;
@@ -52,16 +52,25 @@ ul {
   line-height: 1;
   text-align: center;
 }
+#searchButton {
+  color: darkblue;
+}
+#currentLocation {
+  color: darkred;
+}
 .units {
   position: relative;
   font-size: 18px;
 }
 #contact {
   color: #141518;
-  font-size: smaller;
+  font-size: 14px;
+  position: fixed;
   right: 0;
   bottom: 0;
 }
 div.col-6 {
   padding: 15px;
+  max-width: 50px;
+  flex: 0 0 50%;
 }

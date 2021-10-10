@@ -6,7 +6,7 @@ li {
 }
 
 ul {
-  right: 0px;
+  margin-bottom: 10px;
 }
 p {
   padding-left: 5px;
@@ -32,7 +32,8 @@ p {
 }
 .container {
   width: 100%;
-  padding: 15px auto;
+  padding: 15px 0 15px 0;
+  max-width: 540px;
 }
 .row {
   display: flex;

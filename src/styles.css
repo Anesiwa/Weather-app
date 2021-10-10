@@ -7,8 +7,10 @@ a {
 ul {
   right: 0px;
 }
-.temperatureDetails {
+.row {
   padding: 15px;
+  display: flex;
+  margin: 15px 0 15px 0;
 }
 .units {
   font-size: 20px;
@@ -47,6 +49,9 @@ ul {
   font-size: 20px;
   text-align: center;
   display: inline;
+}
+.units {
+  font-size: 12px;
 }
 #contact {
   color: #141518;

@@ -59,7 +59,7 @@ ul {
 #contact {
   color: #141518;
   font-size: smaller;
-  position: fixed;
+  position: relative;
   right: 0px;
   bottom: 0px;
 }

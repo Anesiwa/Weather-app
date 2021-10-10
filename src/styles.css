@@ -20,11 +20,15 @@ div {
   padding: 15px;
   max-width: 600px;
 }
+.container {
+  width: 100%;
+  padding: 15px auto;
+}
 .row {
   display: inline-flex;
 }
 .city {
-  font-size: 35px;
+  font-size: 50px;
   color: blue;
 }
 #date {
@@ -33,12 +37,12 @@ div {
 #temperature {
   font-size: 20px;
   text-align: center;
-  display: inline-block;
+  display: block;
 }
 .weather-icon {
   display: block;
   margin: 0 auto;
-  max-width: 50px;
+  max-width: 100px;
 }
 #contact {
   border: #3a3a3c;

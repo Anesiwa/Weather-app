@@ -72,7 +72,7 @@ function getCurrentPosition() {
   let longitude = position.coords.longitude;
 
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-  let apiEndpoing = "https://api.openweathermap.org/data/2.5/weather";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let currentPositionApiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(`${currentPositionApiUrl}&appid=${apiKey}`).then(showPosition);
 }

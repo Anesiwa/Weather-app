@@ -1,3 +1,6 @@
+body {
+  margin: 0 auto;
+}
 h1 {
   margin: 10px 0 0 0;
 }
@@ -8,9 +11,7 @@ li {
 ul {
   margin-bottom: 10px;
 }
-p {
-  padding-left: 5px;
-}
+
 .row {
   padding: 15px;
   display: flex;
@@ -29,11 +30,12 @@ p {
   border-radius: 10px;
   padding: 15px;
   max-width: 600px;
+  margin: 20px auto;
 }
 .container {
   width: 100%;
-  padding: 15px 0 15px 0;
-  max-width: 540px;
+  padding: 15px 0;
+  max-width: 600px;
 }
 .row {
   display: flex;
@@ -71,6 +73,7 @@ p {
   border-color: #3a3a3c;
   text-align: center;
   vertical-align: middle;
+  display: block;
 }
 #currentLocation.hover {
   cursor: pointer;

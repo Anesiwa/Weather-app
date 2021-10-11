@@ -73,7 +73,6 @@ ul {
   border-color: #3a3a3c;
   text-align: center;
   vertical-align: middle;
-  display: block;
 }
 #currentLocation.hover {
   cursor: pointer;

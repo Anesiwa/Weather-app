@@ -61,14 +61,22 @@ celsiusLink.addEventListener("click", convertToCelsius);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-function showPosition(position) {
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
+function showCurrentTemperature(response) {
+  let temperature = Math.round(response.data.main.temp);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(temperature);
 }
 
 function getCurrentPosition() {
-  navigator.geolocation.getCurrentPosition(showPosition);
+  let latitude = posistion.coords.latitude;
+  let longitude = position.coords.longitude;
+
+  let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
+  let apiEndpoing = "https://api.openweathermap.org/data/2.5/weather";
+  let currentPositionApiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(`${currentPositionApiUrl}&appid=${apiKey}`).then(showPosition);
 }
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
+navigator.geolocation.getCurrentPosition(showCurrentTemperature);

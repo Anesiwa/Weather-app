@@ -68,7 +68,7 @@ function showCurrentTemperature(response) {
 }
 
 function retrievePosition(position) {
-  let latitude = posistion.coords.latitude;
+  let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
 
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";

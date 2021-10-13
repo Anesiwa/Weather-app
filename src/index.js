@@ -70,14 +70,12 @@ function showCurrentTemperature(response) {
 function retrievePosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-
+  let cityName = document.querySelector("#locationInput");
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let currentPositionApiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `${apiEndpoint}?q=${cityName}&appid=${apiKey}`;
 
-  axios
-    .get(`${currentPositionApiUrl}&appid=${apiKey}`)
-    .then(showCurrentTemperature);
+  axios.get(apiUrl).then(showCurrentTemperature);
 }
 
 navigator.geolocation.getCurrentPosition(retrievePosition);

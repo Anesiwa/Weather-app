@@ -61,21 +61,28 @@ celsiusLink.addEventListener("click", convertToCelsius);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-function showCurrentTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(temperature);
+function currentCityDetail(event) {
+  function showCurrentTemperature(response) {
+    let temperature = Math.round(response.data.main.temp);
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = `${temperature}`;
+  }
+
+  function retrievePosition(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let cityName = document.querySelector("#locationInput");
+    let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+    let apiUrl = `${apiEndpoint}?q=${cityName}&appid=${apiKey}`;
+    console.log(
+      `Your latitude is ${latitude} and your longitude is ${longitude}`
+    );
+    axios.get(apiUrl).then(showCurrentTemperature);
+  }
+
+  navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
-function retrievePosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let cityName = document.querySelector("#locationInput");
-  let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiUrl = `${apiEndpoint}?q=${cityName}&appid=${apiKey}`;
-
-  axios.get(apiUrl).then(showCurrentTemperature);
-}
-
-navigator.geolocation.getCurrentPosition(retrievePosition);
+let button = document.querySelector("button");
+button.addEventListener("click", currentCityDetail);

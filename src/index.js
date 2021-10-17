@@ -28,12 +28,14 @@ dateElement.innerHTML = formatDate(currentTime);
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
 }
 
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#locationInput").value;
-  cityElement.innerHTML = cityInput.value;
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);

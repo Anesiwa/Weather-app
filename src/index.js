@@ -52,6 +52,9 @@ function handleSubmit(event) {
   search(city);
 }
 
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
 //Bonus
 
 function convertToCelsius(event) {

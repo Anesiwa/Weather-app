@@ -62,12 +62,6 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 function currentCityDetail(event) {
-  function showCurrentTemperature(response) {
-    let temperature = Math.round(response.data.main.temp);
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = `${temperature}`;
-  }
-
   function retrievePosition(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
@@ -82,6 +76,12 @@ function currentCityDetail(event) {
   }
 
   navigator.geolocation.getCurrentPosition(retrievePosition);
+
+  function showCurrentTemperature(response) {
+    let temperature = Math.round(response.data.main.temp);
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = `${temperature}`;
+  }
 }
 
 let button = document.querySelector("button");

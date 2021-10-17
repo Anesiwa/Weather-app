@@ -75,14 +75,13 @@ function currentCityDetail(event) {
     axios.get(apiUrl).then(showCurrentTemperature);
   }
 
-  navigator.geolocation.getCurrentPosition(retrievePosition);
-
   function showCurrentTemperature(response) {
     let temperature = Math.round(response.data.main.temp);
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = `${temperature}`;
   }
 }
+navigator.geolocation.getCurrentPosition(retrievePosition);
 
 let button = document.querySelector("button");
 button.addEventListener("click", currentCityDetail);

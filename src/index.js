@@ -22,19 +22,21 @@ function formatDate(date) {
   return `${days[dayIndex]} ${hours}:${minutes}`;
 }
 
-//Challenge 1
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-//Challenge 2
+function displayWeatherCondition(response) {
+  document.querySelector("#city").innerHTML = response.data.name;
+}
+
 function search(event) {
   event.preventDefault();
-  let cityElement = document.querySelector("#city");
-  let cityInput = document.querySelector("#locationInput");
+  let city = document.querySelector("#locationInput").value;
   cityElement.innerHTML = cityInput.value;
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 let searchForm = document.querySelector("#search-form");

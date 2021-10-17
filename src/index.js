@@ -62,6 +62,7 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 function currentCityDetail(event) {
+  navigator.geolocation.getCurrentPosition(retrievePosition);
   function retrievePosition(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
@@ -81,7 +82,6 @@ function currentCityDetail(event) {
     temperatureElement.innerHTML = `${temperature}`;
   }
 }
-navigator.geolocation.getCurrentPosition(retrievePosition);
 
 let button = document.querySelector("button");
 button.addEventListener("click", currentCityDetail);

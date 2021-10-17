@@ -76,19 +76,9 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 function searchCurrentLocation(position) {
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-  let cityName = document.querySelector("#locationInput");
-  let apiUrl = `https://api.openweathermap.org/data/2.5/find?lat=${
-    position.coords.latitude
-  }&lon=${posistion.coords / longitude}&appid=${apiKey}&units=metric`;
-  let apiUrl = `${apiEndpoint}?q=${cityName}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/find?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   console.log(position);
   axios.get(apiUrl).then(displayWeatherCondition);
-}
-
-function showCurrentTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = `${temperature}`;
 }
 
 let button = document.querySelector("button");

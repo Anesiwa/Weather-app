@@ -43,13 +43,13 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#locationInput").value;
+  let city = document.querySelector("#location-input").value;
   searchCity(city);
 }
 
 function searchCurrentLocation(position) {
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/find?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 

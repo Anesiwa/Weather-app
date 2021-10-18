@@ -59,13 +59,11 @@ function getCurrentLocation(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
   temperatureElement.innerHTML = Math.round((temperature - 32) / 1.8);
 }
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
   temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
 

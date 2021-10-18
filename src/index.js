@@ -22,12 +22,7 @@ function formatDate(date) {
   return `${days[dayIndex]} ${hours}:${minutes}`;
 }
 
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
-
 function displayWeatherCondition(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -37,7 +32,7 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   document.querySelector("#weatherDescription").innerHTML =
-    response.data.weather[0].description;
+    response.data.weather[0].main;
 }
 
 function search(city) {
@@ -47,14 +42,17 @@ function search(city) {
 }
 
 function handleSubmit(event) {
-  debugger;
   event.preventDefault();
   let city = document.querySelector("#locationInput").value;
   search(city);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
+function searchCurrentLocation(position) {
+  let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  console.log(position);
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
 
 function convertToCelsius(event) {
   event.preventDefault();
@@ -75,14 +73,14 @@ celsiusLink.addEventListener("click", convertToCelsius);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-function searchCurrentLocation(position) {
-  let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  console.log(position);
-  axios.get(apiUrl).then(displayWeatherCondition);
-}
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
 
 let button = document.querySelector("button");
 button.addEventListener("click", searchCurrentLocation);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
 search("New York");

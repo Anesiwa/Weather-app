@@ -85,4 +85,4 @@ button.addEventListener("click", searchCurrentLocation);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-search("New York");
+searchCity("New York");

@@ -78,3 +78,8 @@ ul {
   flex: 0 0 50%;
   width: 100%;
 }
+.col {
+  position: relative;
+  flex: 0 0 50%;
+  width: 100%;
+}

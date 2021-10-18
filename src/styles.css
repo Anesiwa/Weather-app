@@ -14,11 +14,6 @@ ul {
   margin: 0 auto;
 }
 
-.units {
-  font-size: 20px;
-  color: #3a3a3c;
-}
-
 .weather-app {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: sans-serif;
@@ -28,14 +23,7 @@ ul {
   max-width: 600px;
   margin: 20px auto;
 }
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 550px;
-}
+
 .row {
   display: flex;
   margin: 5px 0;
@@ -52,6 +40,13 @@ ul {
 .temperatureDetails {
   color: #141518;
 }
+.units {
+  position: relative;
+  top: -34px;
+  font-size: 18px;
+  color: #3a3a3c;
+}
+
 #temperature {
   font-size: 64px;
   font-weight: 400;
@@ -75,19 +70,9 @@ ul {
 #currentLocation.hover {
   cursor: pointer;
 }
-.units {
-  position: relative;
-  top: -34px;
-  font-size: 18px;
-}
+
 #contact {
   color: #141518;
   font-size: 14px;
   float: right;
-}
-.col-6 {
-  position: relative;
-  max-width: 60%;
-  flex: 0 0 50%;
-  width: 100%;
 }

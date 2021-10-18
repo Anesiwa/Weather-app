@@ -35,7 +35,7 @@ function displayWeatherCondition(response) {
     response.data.weather[0].main;
 }
 
-function search(city) {
+function searchCity(city) {
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
@@ -44,7 +44,7 @@ function search(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#locationInput").value;
-  search(city);
+  searchCity(city);
 }
 
 function searchCurrentLocation(position) {

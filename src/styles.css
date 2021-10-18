@@ -76,3 +76,15 @@ ul {
   font-size: 14px;
   float: right;
 }
+.col-6 {
+  position: relative;
+  max-width: 60%;
+  flex: 0 0 50%;
+  width: 100%;
+}
+.col-3 {
+  position: relative;
+  max: width 50%;
+  flex: 0 0 50%;
+  width: 100%;
+}

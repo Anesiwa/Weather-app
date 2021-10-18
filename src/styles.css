@@ -55,8 +55,6 @@ ul {
 #searchButton {
   color: darkblue;
   border-color: #3a3a3c;
-  text-align: center;
-  vertical-align: middle;
 }
 #searchButton.hover {
   cursor: pointer;
@@ -64,8 +62,6 @@ ul {
 #currentLocation {
   color: darkred;
   border-color: #3a3a3c;
-  text-align: center;
-  vertical-align: middle;
 }
 #currentLocation.hover {
   cursor: pointer;
@@ -84,7 +80,7 @@ ul {
 }
 .col-3 {
   position: relative;
-  max: width 50%;
+  max-width: 50%;
   flex: 0 0 50%;
   width: 100%;
 }

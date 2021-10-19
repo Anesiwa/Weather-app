@@ -27,6 +27,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -48,9 +49,8 @@ function handleSubmit(event) {
 }
 
 function searchCurrentLocation(position) {
-  let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  console.log(response);
+  let geolocationApiKey = "2d96d64425dca1d6eda00d942a281c0d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${geolocationApiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -61,12 +61,12 @@ function getCurrentLocation(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round((temperature - 32) / 1.8);
+  temperatureElement.innerHTML = Math.round(("#temperature" - 32) / 1.8);
 }
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round(("#temperature" * 9) / 5 + 32);
 }
 
 let celsiusLink = document.querySelector("#celsius-link");
@@ -80,7 +80,7 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 let button = document.querySelector("#currentLocation");
-button.addEventListener("click", searchCurrentLocation);
+button.addEventListener("click", getCurrentLocation);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);

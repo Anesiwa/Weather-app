@@ -40,17 +40,17 @@ ul {
 .temperatureDetails {
   color: #141518;
 }
-.units {
-  position: relative;
-  top: -34px;
-  font-size: 18px;
-  color: #3a3a3c;
-}
 
 #temperature {
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
+}
+.units {
+  position: relative;
+  top: -34px;
+  font-size: 18px;
+  color: #3a3a3c;
 }
 #searchButton {
   color: darkblue;
@@ -82,6 +82,5 @@ ul {
 }
 .col-3 {
   position: relative;
-  flex: 0 0 50%;
   width: 100%;
 }
